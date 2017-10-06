@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/lato.css">
+<link rel="stylesheet" href="css/w3-colors-camo.css">
+<link rel="stylesheet" href="css/w3-colors-signal.css">
+<link rel="stylesheet" href="css/w3-theme-teal.css">
+<script>
+function myFunction() {
+    alert("Maaf, Anda Harus Login Terlebih Dahulu!");
+}
+</script>
+<style>
+.bgimg-3 {
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        background-image: url("image/back8.jpg");   
+        height: 600px;
+    }
+</style>
+
+<body id="myPage">
+
+<!-- Navbar -->
+  <div class="w3-top">
+    <ul class="w3-navbar w3-black w3-left-align">
+        <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+            <a class="w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+        </li>
+        <li><a href="nonmember.html" class="w3-teal"><i class="fa fa-home w3-margin-right"></i>My Daily Calories</a></li>
+        <li class="w3-hide-small"><a href="nonmember.html" class="w3-hover-white">Hitung Kalori</a></li>
+            <li class="w3-hide-small w3-dropdown-hover">
+              <a href="javascript:void(0);" title="Notifications">Komposisi Makanan <i class="fa fa-caret-down"></i></a>     
+              <div class="w3-dropdown-content w3-white w3-card-4">
+                  <a onclick="myFunction()">Susun Komposisi Makanan</a>
+              </div>
+            </li>
+          <li class="w3-hide-small"><a href="#bantuan" class="w3-hover-white">Bantuan</a></li>
+
+        <li class="w3-hide-small w3-right"><a onclick="document.getElementById('masuk').style.display='block'" class="w3-btn w3-hover-white " style="width:90px">Masuk</a></li>  
+        <li class="w3-hide-small w3-right"><a href="daftar.html" class="w3-btn w3-hover-white " style="width:90px">Daftar</a></li>  
+    </ul>
+  </div>    
+
+
+
+<!-- Daftar Container -->
+  <div class="bgimg-3 w3-container w3-padding-64 w3-white" id="contact">
+    <div class="w3-rows w3-padding-xxlarge">
+        <div class="w3-col m5  w3-container">
+              <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Member My Daily Calories</span></div>
+              <p>Bergabung menjadi member dan dapatkan fitur-fitur ini</p>
+              <ul class="w3-ul" style="width: 350px">
+                <li><i class="fa fa-check" style="font-size:24px;color:teal;"></i> Hitung Kalori Makanan</li>
+                <li><i class="fa fa-check" style="font-size:24px;color:teal;"></i> Menyusun Komposisi Makanan</li>
+                <li><i class="fa fa-check" style="font-size:24px;color:teal;"></i> Mendapat Saran Komposisi Makanan</li>
+              </ul>
+        </div>
+        <div class="w3-col m5">
+          <div class="w3-container w3-teal">
+              <h3><i class="w3-margin-right w3-wide"></i>Daftar Member My Daily Calories</h3>
+          </div>
+            <form class="w3-container w3-card-4 w3-padding-16 w3-pale-green " action="form.asp" target="_blank">
+              <div class="w3-group">  
+                <label class="">Name</label>
+                <input class="w3-input w3-border" type="text" name="Name" required style="width:350px">
+              </div>
+              <div class="w3-group">      
+                <label >Email</label>
+                <input class="w3-input w3-border" type="text" name="Email" required style="width:350px">
+              </div>
+              <div class="w3-group">      
+                <label >Tanggal Lahir</label>
+                <input class="w3-input w3-border" type="date" name="tanggalLahir" style="width:350px" required>
+              </div>  
+              <div class="w3-group">      
+                <label >Password</label>
+                <input class="w3-input w3-border" type="password" name="password" style="width:350px" required>
+              </div>  
+              
+              <button type="submit" class="w3-btn w3-large w3-hover-green w3-theme">Daftar</button>
+              
+            </form>
+        </div>  
+    </div>
+  </div>
+
+
+<!-- Modal Login -->
+  <div id="masuk" class="w3-modal">
+      <div class="w3-modal-content w3-card-8 w3-animate-top" style="max-width:400px">
+        <div class="w3-center"><br>
+          <span onclick="document.getElementById('masuk').style.display='none'" class="w3-closebtn w3-hover-red w3-container w3-padding-8 w3-display-topright" title="Close Modal">×</span>  
+          <img src="img_avatar4.png" alt="Logo" style="width:30%" class="w3-circle w3-margin-top">
+          <h4> MASUK </h4>
+        </div>
+
+        <form class="w3-container" action="form.asp">
+          <div class="w3-section">
+            <label><b>Username</b></label>
+            <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Masukkan Username" name="usrname" required>
+            <label><b>Password</b></label>
+            <input class="w3-input w3-border" type="text" placeholder="Masukkan Password" name="psw" required>
+            <button class="w3-btn-block w3-green w3-section w3-padding" type="submit">Masuk</button>
+            <span class="w3-right w3-padding w3-hide-small"><a href="#">Lupa password?</a></span>
+            <input class="w3-check w3-margin-top" type="checkbox" checked="checked"> Ingat Saya
+          </div>
+        </form>
+      </div>
+  </div>
+
+
+<!-- Footer -->
+    <footer class="w3-container w3-black w3-center">
+          <h4>Follow Us</h4>
+          <a class="w3-btn-floating w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+          <a class="w3-btn-floating w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+          <a class="w3-btn-floating w3-teal" href="javascript:void(0)" title="Instagaram"><i class="fa fa-instagram"></i></a>
+          <p><a href="nonmember.html" target="_blank">My Daily Calories</a></p>
+
+          <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+            <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
+            <a class="w3-btn w3-black" href="#myPage"><span class="w3-xlarge">
+            <i class="fa fa-chevron-circle-up"></i></span></a>
+          </div>
+    </footer>
+
+</body>
+</html>
