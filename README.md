@@ -1,7 +1,6 @@
 # my-daily-calories
 **Projek akhir mata kuliah Rekayasa Perangkat Lunak.**
 
-
 _feel free to ask or developt this site :)_
 
 _this site runing on **apache2 2.4.27**, **mysql 5.6.37**, **PHP 5.6.31**_
